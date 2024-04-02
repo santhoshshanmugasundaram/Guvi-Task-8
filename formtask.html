@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Style for the stars */
+    .rating {
+      unicode-bidi: bidi-override;
+    }
+
+    .rating > span {
+      display: inline-block;
+      position: relative;
+      font-size: 24px; /* Adjust size of stars */
+    }
+
+    .rating > span:hover:before,
+    .rating > span:hover ~ span:before {
+      content: "\f005"; /* Unicode for filled star */
+      position: absolute;
+      color: orange; /* Change color on hover */
+    }
+
+    .checked:before {
+      content: "\f005"; /* Unicode for filled star */
+      color: orange; /* Change color for checked stars */
+    }
+    .grid-row {
+      margin-bottom: 1em;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 3px;
+    }
+    .grid-header {
+      margin-bottom: 1em;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 3px;
+    }
+
+  </style>
+</head>
+<body>
+
+<form>
+  <label for="fname">Name*</label><br>
+  <input type="text" id="fname" name="fname">  <input type="text" id="lname" name="lname"><br><br>
+  <label for="email">Email*</label><br>
+  <input type="email" id="email" name="email"><br><br>
+  <label for="YourExperience">Your Experience*</label><br>
+  <br>
+  <div class="rating">
+    <!-- 5 stars -->
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span> <br><br> Overall, how would you rate your Experience with us?
+  </div><br>
+  
+    <label>How satisfied are you with*</label><br><br>
+    <div class="grid-header">
+    <div class="header-item"></div>
+    <div class="header-item">Very unsatisfied</div>
+    <div class="header-item">Unsatisfied</div>
+    <div class="header-item">Neutral</div>
+    <div class="header-item">satisfied</div>
+    <div class="header-item">Very satisfied </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="flex-item">Purchase</div>
+    <label class="flex-item">
+      <input type="radio" value="very_unsatisfied" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="unsatisfied" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="neutral" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="likely" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="very_likely" name="purchase_satisfaction"> 
+    </label>
+  </div>
+  <div class="grid-row">
+    <div class="flex-item">Service</div>
+    <label class="flex-item">
+      <input type="radio" value="very_unsatisfied" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="unsatisfied" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="neutral" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="likely" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="very_likely" name="purchase_satisfaction"> 
+    </label>
+  </div>
+<div class="grid-row">
+    <div class="flex-item">Company overall</div>
+    <label class="flex-item">
+      <input type="radio" value="very_unsatisfied" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="unsatisfied" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="neutral" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="likely" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="very_likely" name="purchase_satisfaction"> 
+    </label>
+  </div>
+  <br>
+  <label> How likely are you to* <br> <br>
+   <div class="grid-header">
+    <div class="header-item"></div>
+    <div class="header-item">Very unlikely</div>
+    <div class="header-item">unlikely</div>
+    <div class="header-item">Neutral</div>
+    <div class="header-item">Likely</div>
+    <div class="header-item">Very Likely</div>
+  </div>
+
+  <div class="grid-row">
+    <div class="flex-item">Buy from us again</div>
+    <label class="flex-item">
+      <input type="radio" value="very_unlikely" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="ununlikely" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="neutral" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="likely" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="very_likely" name="purchase_satisfaction"> 
+    </label>
+  </div>
+  <div class="grid-row">
+    <div class="flex-item">Recommend our product to others </div>
+    <label class="flex-item">
+      <input type="radio" value="very_unlikely" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="unlikely" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="neutral" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="likely" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="very_likely" name="purchase_satisfaction"> 
+    </label>
+  </div>
+<div class="grid-row">
+    <div class="flex-item">Recommend our company to others</div>
+    <label class="flex-item">
+      <input type="radio" value="very_unlikely" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="unlikely" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="neutral" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="likely" name="purchase_satisfaction"> 
+    </label>
+    <label class="flex-item">
+      <input type="radio" value="very_likely" name="purchase_satisfaction"> 
+    </label> 
+  </div>
+  <br>
+  <label> Additional comments or suggestions* <br> <br>
+    
+  
+  <input type="button" onclick="formSubmit()" value="Submit"> <br> <br>
+   <input type="text">
+ 
+</form>
+
+</script>
+
+</body>
+</html>
